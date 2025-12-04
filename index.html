@@ -1,40 +1,43 @@
-<main class="h-screen w-screen flex justify-center items-center">
+<main class="h-screen w-screen flex items-center justify-center">
 
-    <!-- Full-width dashboard container -->
-    <div class="grid h-[90vh] w-screen grid-cols-[1fr_3fr] gap-4 px-4">
+    <div class="grid w-[95vw] h-[90vh] grid-cols-[1fr_3fr] gap-4 p-4">
 
-        <!-- LEFT SIDE (25% width) -->
+        <!-- LEFT SIDE (25%) -->
         <div class="flex flex-col gap-4">
 
-            <!-- Top Left Widget -->
-            <div class="widget bg-white shadow-lg rounded-xl p-4 h-1/2 flex flex-col">
+            <!-- Widget 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-4 h-1/2 flex flex-col overflow-hidden">
                 <h2 class="text-xl font-semibold mb-2">Photo Test</h2>
-                <div class="flex-1 overflow-hidden">
+                <div class="flex-1">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/HONDA_ASIMO.jpg"
-                         class="w-full h-full object-cover">
+                         class="object-cover w-full h-full">
                 </div>
             </div>
 
-            <!-- Bottom Left Widget -->
-            <div class="widget bg-white shadow-lg rounded-xl p-4 h-1/2 flex flex-col">
+            <!-- Widget 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-4 h-1/2 flex flex-col overflow-hidden">
                 <h2 class="text-xl font-semibold mb-2">Video Test</h2>
-                <div class="flex-1 overflow-hidden">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                            class="w-full h-full"></iframe>
+                <div class="flex-1">
+                    <iframe
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        class="w-full h-full"
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
 
         </div>
 
-        <!-- RIGHT SIDE — GOOGLE CALENDAR (75% width, full height) -->
-        <div class="widget bg-white shadow-lg rounded-xl p-4 flex flex-col overflow-hidden h-full">
+        <!-- RIGHT SIDE — GOOGLE CALENDAR (75%) -->
+        <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col overflow-hidden h-full">
             <h2 class="text-xl font-semibold mb-2">Create Shop Schedule</h2>
+
             <iframe
                 src="https://calendar.google.com/calendar/u/0/embed?color=%239a9cff&color=%23fad165&src=c_453b2f485973628e4fba1f38800e0e5b0da0dc87b01d25d1d9672af46eeb55ba@group.calendar.google.com&src=c_bc32f508f110930d13a896dfc337478eab6949c3576def6036ccad9efd326b6d@group.calendar.google.com"
-                class="flex-1 w-full h-full border-0"
-                style="min-height:0"
-            ></iframe>
+                class="flex-1 w-full h-full border-0">
+            </iframe>
         </div>
 
     </div>
+
 </main>
