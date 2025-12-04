@@ -1,119 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotics Factory Dashboard</title>
-    <!-- Load Tailwind CSS via CDN for quick styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Set a default scroll behavior for the iframes */
-        .iframe-container {
-            height: 400px; /* Default height for desktop view */
-            overflow: hidden; /* Hide internal scrollbars initially */
-        }
+<main class="h-screen w-screen flex justify-center items-center">
 
-        /* Ensure all iframes take up 100% of their container space */
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+    <!-- Full-width dashboard container -->
+    <div class="grid h-[90vh] w-screen grid-cols-[1fr_3fr] gap-4 px-4">
 
-        /* Custom scrollbar style for the main page */
-        body::-webkit-scrollbar {
-            width: 8px;
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #3b82f6;
-            border-radius: 4px;
-        }
-        body::-webkit-scrollbar-track {
-            background-color: #f1f5f9;
-        }
-    </style>
-</head>
-<body class="bg-gray-100 min-h-screen font-sans">
+        <!-- LEFT SIDE (25% width) -->
+        <div class="flex flex-col gap-4">
 
-    <header class="bg-blue-600 shadow-md py-4">
-        <div class="container mx-auto px-4">
-            <h1 class="text-3xl font-extrabold text-white text-center tracking-wider">
-                Test Dashboard
-            </h1>
-        </div>
-    </header>
-
-<style>
-    html, body {
-        height: 100%;
-        overflow: hidden; /* 🚫 No scroll allowed */
-    }
-
-    main {
-        height: calc(100vh - 90px); /* full screen minus header/footer */
-        overflow: hidden;
-    }
-
-    /* 2x2 Grid always visible without scrolling */
-    .dashboard-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr; /* Makes everything fit */
-        height: 100%;
-        gap: 20px;
-    }
-
-    .widget {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Videos/images must scale to available height */
-    .widget-content {
-        flex: 1;
-        overflow: hidden;
-    }
-
-    iframe, img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-</style>
-
-
-<main class="container mx-auto p-4">
-    <div class="dashboard-grid">
-
-        <div class="widget bg-white rounded-xl shadow-lg p-4">
-            <h2 class="text-xl font-semibold text-gray-800 mb-2">Photo Test</h2>
-            <div class="widget-content">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/HONDA_ASIMO.jpg">
+            <!-- Top Left Widget -->
+            <div class="widget bg-white shadow-lg rounded-xl p-4 h-1/2 flex flex-col">
+                <h2 class="text-xl font-semibold mb-2">Photo Test</h2>
+                <div class="flex-1 overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/HONDA_ASIMO.jpg"
+                         class="w-full h-full object-cover">
+                </div>
             </div>
+
+            <!-- Bottom Left Widget -->
+            <div class="widget bg-white shadow-lg rounded-xl p-4 h-1/2 flex flex-col">
+                <h2 class="text-xl font-semibold mb-2">Video Test</h2>
+                <div class="flex-1 overflow-hidden">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            class="w-full h-full"></iframe>
+                </div>
+            </div>
+
         </div>
 
-        <div class="widget bg-white rounded-xl shadow-lg p-4">
-            <h2 class="text-xl font-semibold text-gray-800 mb-2">Video Test</h2>
-            <div class="widget-content">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"></iframe>
-            </div>
-        </div>
-
-        <div class="widget bg-white rounded-xl shadow-lg p-4 col-span-2">
-            <h2 class="text-xl font-semibold text-gray-800 mb-2">Create Shop Schedule</h2>
-            <div class="widget-content">
-                <iframe src="https://calendar.google.com/calendar/u/0/embed?..."></iframe>
-            </div>
+        <!-- RIGHT SIDE — GOOGLE CALENDAR (75% width, full height) -->
+        <div class="widget bg-white shadow-lg rounded-xl p-4 flex flex-col overflow-hidden h-full">
+            <h2 class="text-xl font-semibold mb-2">Create Shop Schedule</h2>
+            <iframe
+                src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_URL"
+                class="flex-1 w-full h-full border-0"
+                style="min-height:0"
+            ></iframe>
         </div>
 
     </div>
 </main>
-
-
-    <footer class="text-center py-6 text-gray-500 text-sm">
-        Dashboard created for GitHub Pages deployment.
-    </footer>
-
-</body>
-</html>
