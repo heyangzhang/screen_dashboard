@@ -1,43 +1,71 @@
-<main class="h-screen w-screen flex items-center justify-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Factory Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-    <div class="grid w-[95vw] h-[90vh] grid-cols-[1fr_3fr] gap-4 p-4">
+<body class="bg-gray-100 font-sans">
 
-        <!-- LEFT SIDE (25%) -->
-        <div class="flex flex-col gap-4">
+    <!-- HEADER -->
+    <header class="bg-blue-600 shadow-md py-4">
+        <h1 class="text-3xl font-extrabold text-white text-center tracking-wider">
+            Test Dashboard
+        </h1>
+    </header>
 
-            <!-- Widget 1 -->
-            <div class="bg-white rounded-xl shadow-lg p-4 h-1/2 flex flex-col overflow-hidden">
-                <h2 class="text-xl font-semibold mb-2">Photo Test</h2>
-                <div class="flex-1">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/HONDA_ASIMO.jpg"
-                         class="object-cover w-full h-full">
+    <!-- MAIN DASHBOARD -->
+    <main class="h-screen w-screen flex items-center justify-center">
+
+        <div class="grid w-[95vw] h-[90vh] grid-cols-[1fr_3fr] gap-4 p-4">
+
+            <!-- LEFT SIDE (STACKED WIDGETS) -->
+            <div class="flex flex-col gap-4">
+
+                <!-- Widget 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-4 h-1/2 flex flex-col overflow-hidden">
+                    <h2 class="text-xl font-semibold mb-2">Photo Test</h2>
+                    <div class="flex-1">
+                        <img 
+                            src="https://upload.wikimedia.org/wikipedia/commons/0/05/HONDA_ASIMO.jpg"
+                            class="object-cover w-full h-full">
+                    </div>
                 </div>
+
+                <!-- Widget 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-4 h-1/2 flex flex-col overflow-hidden">
+                    <h2 class="text-xl font-semibold mb-2">Video Test</h2>
+                    <div class="flex-1">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            class="w-full h-full"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Widget 2 -->
-            <div class="bg-white rounded-xl shadow-lg p-4 h-1/2 flex flex-col overflow-hidden">
-                <h2 class="text-xl font-semibold mb-2">Video Test</h2>
-                <div class="flex-1">
-                    <iframe
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                        class="w-full h-full"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+            <!-- RIGHT SIDE — GOOGLE CALENDAR (75% WIDTH & FULL HEIGHT) -->
+            <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col overflow-hidden h-full">
+                <h2 class="text-xl font-semibold mb-2">Create Shop Schedule</h2>
+
+                <iframe
+                    src="https://calendar.google.com/calendar/u/0/embed?color=%239a9cff&color=%23fad165&src=c_453b2f485973628e4fba1f38800e0e5b0da0dc87b01d25d1d9672af46eeb55ba@group.calendar.google.com&src=c_bc32f508f110930d13a896dfc337478eab6949c3576def6036ccad9efd326b6d@group.calendar.google.com"
+                    class="flex-1 w-full h-full border-0">
+                </iframe>
             </div>
 
         </div>
 
-        <!-- RIGHT SIDE — GOOGLE CALENDAR (75%) -->
-        <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col overflow-hidden h-full">
-            <h2 class="text-xl font-semibold mb-2">Create Shop Schedule</h2>
+    </main>
 
-            <iframe
-                src="https://calendar.google.com/calendar/u/0/embed?color=%239a9cff&color=%23fad165&src=c_453b2f485973628e4fba1f38800e0e5b0da0dc87b01d25d1d9672af46eeb55ba@group.calendar.google.com&src=c_bc32f508f110930d13a896dfc337478eab6949c3576def6036ccad9efd326b6d@group.calendar.google.com"
-                class="flex-1 w-full h-full border-0">
-            </iframe>
-        </div>
+    <!-- FOOTER -->
+    <footer class="text-center py-4 text-gray-500 text-sm">
+        Dashboard created for GitHub Pages deployment.
+    </footer>
 
-    </div>
-
-</main>
+</body>
+</html>
